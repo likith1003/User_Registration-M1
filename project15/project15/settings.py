@@ -126,3 +126,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Added by me
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# -----------------------------------------------
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'likith.qsp@gmail.com'
+EMAIL_HOST_PASSWORD = 'ykgh mcgg ooqd kyoi'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_PORT = 587
+
+
+SESSION_COOKIE_AGE = 1500
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True

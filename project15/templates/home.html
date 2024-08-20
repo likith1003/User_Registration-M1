@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}
+home
+{% endblock title %}
+{% block body %}
+<center><h1>Welcome to home page</h1></center>
+{% if user.is_authenticated %}
+<h1>welcome {{UO.username}}</h1>
+{% else %}
+<h1>Already a User? <a href="{% url 'user_login' %}">Login</a></h1>
+<h1>New to This application <a href="{% url 'register' %}">Register</a></h1>
+{% endif %}
+{% endblock body %}
