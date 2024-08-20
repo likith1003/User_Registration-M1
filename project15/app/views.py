@@ -81,7 +81,7 @@ def forget_password(request):
         un = request.POST.get('un')
         request.session['username'] = un
         request.session['otp'] = otp
-        UO = User.objects.get(username=un)
+        UO = User.objects.filter(username=un)
         if UO:
             email = UO.email
             message = f"Hello {UO.first_name} The request for Changing the password has been processed Successfully\nplease enter the otp(One Time Password): {otp} to confirm it's you \n\n Please  Donot Share the OTP with anyone"
